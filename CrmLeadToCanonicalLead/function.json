@@ -1,0 +1,21 @@
+{
+  "bindings": [
+    {
+      "name": "crmJsonLead",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "queueName": "crmlead",
+      "connection": "AsbManheim_RootManageSharedAccessKey_SERVICEBUS",
+      "accessRights": "Listen"
+    },
+    {
+      "type": "serviceBus",
+      "connection": "AsbManheim_RootManageSharedAccessKey_SERVICEBUS",
+      "name": "$return",
+      "queueName": "canonicallead",
+      "accessRights": "Manage",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
